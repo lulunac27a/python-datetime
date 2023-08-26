@@ -1,13 +1,16 @@
 import datetime as dt
-year=int(input('Year: '))
-month=int(input('Month: '))
-day=int(input('Day: '))
-hour=int(input('Hour: '))
-minute=int(input('Minute: '))
-second=int(input('Second: '))
-microsecond=int(input('Microsecond: '))
 
-entered=dt.datetime(year,month,day,hour,minute,second,microsecond) #Retrieve date and time input values
+year = int(input("Year: "))
+month = int(input("Month: "))
+day = int(input("Day: "))
+hour = int(input("Hour: "))
+minute = int(input("Minute: "))
+second = int(input("Second: "))
+microsecond = int(input("Microsecond: "))
+
+entered = dt.datetime(
+    year, month, day, hour, minute, second, microsecond
+)  # Retrieve date and time input values
 print(f"Weekday: {entered:%a} ({entered:%A}) Number: {entered:%w}")
 print(f"Day of month: {entered:%d}")
 print(f"Month: {entered:%b} ({entered:%B}) Number: {entered:%m}")
@@ -24,10 +27,10 @@ print(f"Week number (week starts on Monday): {entered:%W}")
 print(f"Locale date and time: {entered:%c}")
 print(f"Locale date: {entered:%x}")
 print(f"Locale time: {entered:%X}")
-print("Time offset:",dt.datetime.astimezone(entered).tzinfo)
-print("Full date and time with time zone:",dt.datetime.astimezone(entered))
+print("Time offset:", dt.datetime.astimezone(entered).tzinfo)
+print("Full date and time with time zone:", dt.datetime.astimezone(entered))
 
-now=dt.datetime.now() #Get current date and time
+now = dt.datetime.now()  # Get current date and time
 print(f"Current Weekday: {now:%a} ({now:%A}) Number: {now:%w}")
 print(f"Current Day of month: {now:%d}")
 print(f"Current Month: {now:%b} ({now:%B}) Number: {now:%m}")
@@ -44,10 +47,10 @@ print(f"Current Week number (week starts on Monday): {now:%W}")
 print(f"Current Locale date and time: {now:%c}")
 print(f"Current Locale date: {now:%x}")
 print(f"Current Locale time: {now:%X}")
-print("Time offset:",dt.datetime.astimezone(now).tzinfo)
-print("Full date and time with time zone:",dt.datetime.astimezone(now))
+print("Time offset:", dt.datetime.astimezone(now).tzinfo)
+print("Full date and time with time zone:", dt.datetime.astimezone(now))
 
-utc=dt.datetime.utcnow() #Get current UTC date and time
+utc = dt.datetime.utcnow()  # Get current UTC date and time
 print(f"Current UTC Weekday: {utc:%a} ({utc:%A}) Number: {utc:%w}")
 print(f"Current UTC Day of month: {utc:%d}")
 print(f"Current UTC Month: {utc:%b} ({utc:%B}) Number: {utc:%m}")
@@ -64,5 +67,5 @@ print(f"Current UTC Week number (week starts on Monday): {utc:%W}")
 print(f"Current UTC Locale date and time: {utc:%c}")
 print(f"Current UTC Locale date: {utc:%x}")
 print(f"Current UTC Locale time: {utc:%X}")
-print("Time offset:",dt.datetime.astimezone(utc).tzinfo)
-print("Full date and time with time zone:",dt.datetime.astimezone(utc))
+print("Time offset:", dt.datetime.astimezone(utc).tzinfo)
+print("Full date and time with time zone:", dt.datetime.astimezone(utc))
