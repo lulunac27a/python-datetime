@@ -1,6 +1,6 @@
 import datetime as dt
 
-entered=dt.datetime.fromtimestamp(float(input("Timestamp: "))) #Input Unix timestamp
+entered = dt.datetime.fromtimestamp(float(input("Timestamp: ")))  # Input Unix timestamp
 print(f"Weekday: {entered:%a} ({entered:%A}) Number: {entered:%w}")
 print(f"Day of month: {entered:%d}")
 print(f"Month: {entered:%b} ({entered:%B}) Number: {entered:%m}")
@@ -21,7 +21,9 @@ print(dt.datetime.isocalendar(entered))
 print(dt.datetime.isoformat(entered))
 print(dt.datetime.toordinal(entered))
 
-utcentered=dt.datetime.utcfromtimestamp(float(input("UTC Timestamp: "))) #Input UTC Unix timestamp
+utcentered = dt.datetime.utcfromtimestamp(
+    float(input("UTC Timestamp: "))
+)  # Input UTC Unix timestamp
 print(f"UTC Weekday: {utcentered:%a} ({utcentered:%A}) Number: {utcentered:%w}")
 print(f"UTC Day of month: {utcentered:%d}")
 print(f"UTC Month: {utcentered:%b} ({utcentered:%B}) Number: {utcentered:%m}")
@@ -42,7 +44,7 @@ print(dt.datetime.isocalendar(utcentered))
 print(dt.datetime.isoformat(utcentered))
 print(dt.datetime.toordinal(utcentered))
 
-now=dt.datetime.now() #Get current date and time
+now = dt.datetime.now()  # Get current date and time
 print(f"Current Weekday: {now:%a} ({now:%A}) Number: {now:%w}")
 print(f"Current Day of month: {now:%d}")
 print(f"Current Month: {now:%b} ({now:%B}) Number: {now:%m}")
@@ -63,7 +65,7 @@ print(dt.datetime.isocalendar(now))
 print(dt.datetime.isoformat(utcentered))
 print(dt.datetime.toordinal(utcentered))
 
-utc=dt.datetime.utcnow() #Get current UTC date and time
+utc = dt.datetime.utcnow()  # Get current UTC date and time
 print(f"Current UTC Weekday: {utc:%a} ({utc:%A}) Number: {utc:%w}")
 print(f"Current UTC Day of month: {utc:%d}")
 print(f"Current UTC Month: {utc:%b} ({utc:%B}) Number: {utc:%m}")
