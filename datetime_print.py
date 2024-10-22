@@ -50,7 +50,7 @@ print(f"Current Locale time: {now:%X}")
 print("Time offset:", dt.datetime.astimezone(now).tzinfo)
 print("Full date and time with time zone:", dt.datetime.astimezone(now))
 
-utc = dt.datetime.utcnow()  # Get current UTC date and time
+utc = dt.datetime.now(dt.timezone.utc)  # Get current UTC date and time
 print(f"Current UTC Weekday: {utc:%a} ({utc:%A}) Number: {utc:%w}")
 print(f"Current UTC Day of month: {utc:%d}")
 print(f"Current UTC Month: {utc:%b} ({utc:%B}) Number: {utc:%m}")
