@@ -1,4 +1,5 @@
 import datetime as dt
+from datetime import datetime
 
 year = int(input("Year: "))
 month = int(input("Month: "))
@@ -30,7 +31,7 @@ print(f"Locale time: {entered:%X}")
 print("Time offset:", dt.datetime.astimezone(entered).tzinfo)
 print("Full date and time with time zone:", dt.datetime.astimezone(entered))
 
-now = dt.datetime.now()  # Get current date and time
+now: datetime = dt.datetime.now()  # Get current date and time
 print(f"Current Weekday: {now:%a} ({now:%A}) Number: {now:%w}")
 print(f"Current Day of month: {now:%d}")
 print(f"Current Month: {now:%b} ({now:%B}) Number: {now:%m}")
@@ -50,7 +51,8 @@ print(f"Current Locale time: {now:%X}")
 print("Time offset:", dt.datetime.astimezone(now).tzinfo)
 print("Full date and time with time zone:", dt.datetime.astimezone(now))
 
-utc = dt.datetime.now(dt.timezone.utc)  # Get current UTC date and time
+# Get current UTC date and time
+utc: datetime = dt.datetime.now(dt.timezone.utc)
 print(f"Current UTC Weekday: {utc:%a} ({utc:%A}) Number: {utc:%w}")
 print(f"Current UTC Day of month: {utc:%d}")
 print(f"Current UTC Month: {utc:%b} ({utc:%B}) Number: {utc:%m}")
