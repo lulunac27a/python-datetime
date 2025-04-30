@@ -1,27 +1,32 @@
 import datetime as dt
 
-entered: dt.datetime = dt.datetime.fromtimestamp(
+entered_datetime: dt.datetime = dt.datetime.fromtimestamp(
     float(input("Timestamp: "))
 )  # Input Unix timestamp
-print(f"Weekday: {entered:%a} ({entered:%A}) Number: {entered:%w}")
-print(f"Day of month: {entered:%d}")
-print(f"Month: {entered:%b} ({entered:%B}) Number: {entered:%m}")
-print(f"Year: {entered:%Y} ('{entered:%y})")
-print(f"Hour: {entered:%H} ({entered:%I} {entered:%p})")
-print(f"Minute: {entered:%M}")
-print(f"Second: {entered:%S}")
-print(f"Microsecond: {entered:%f}")
-print(f"UTC offset: {entered:%z}")
-print(f"Time zone: {entered:%Z}")
-print(f"Day of year: {entered:%j}")
-print(f"Week number (week starts on Sunday): {entered:%U}")
-print(f"Week number (week starts on Monday): {entered:%W}")
-print(f"Locale date and time: {entered:%c}")
-print(f"Locale date: {entered:%x}")
-print(f"Locale time: {entered:%X}")
-print(dt.datetime.isocalendar(entered))
-print(dt.datetime.isoformat(entered))
-print(dt.datetime.toordinal(entered))
+print(
+    f"Weekday: {entered_datetime:%a} ({entered_datetime:%A}) Number: {entered_datetime:%w}"
+)
+print(f"Day of month: {entered_datetime:%d}")
+print(
+    f"Month: {entered_datetime:%b} ({entered_datetime:%B}) Number: {entered_datetime:%m}"
+)
+print(f"Year: {entered_datetime:%Y} ('{entered_datetime:%y})")
+print(
+    f"Hour: {entered_datetime:%H} ({entered_datetime:%I} {entered_datetime:%p})")
+print(f"Minute: {entered_datetime:%M}")
+print(f"Second: {entered_datetime:%S}")
+print(f"Microsecond: {entered_datetime:%f}")
+print(f"UTC offset: {entered_datetime:%z}")
+print(f"Time zone: {entered_datetime:%Z}")
+print(f"Day of year: {entered_datetime:%j}")
+print(f"Week number (week starts on Sunday): {entered_datetime:%U}")
+print(f"Week number (week starts on Monday): {entered_datetime:%W}")
+print(f"Locale date and time: {entered_datetime:%c}")
+print(f"Locale date: {entered_datetime:%x}")
+print(f"Locale time: {entered_datetime:%X}")
+print(dt.datetime.isocalendar(entered_datetime))
+print(dt.datetime.isoformat(entered_datetime))
+print(dt.datetime.toordinal(entered_datetime))
 
 utcentered: dt.datetime = dt.datetime.fromtimestamp(
     float(input("UTC Timestamp: ")), tz=dt.timezone.utc
